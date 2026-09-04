@@ -1,0 +1,19 @@
+{
+  "name": "ckdals1108",
+  "interface": {
+    "displayName": "Eden Skills Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "ckdals1108-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

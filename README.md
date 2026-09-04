@@ -66,6 +66,17 @@ claude plugin install ckdals1108-skills@ckdals1108
 
 ---
 
+### Install as a native Codex CLI Plugin
+
+You can also install directly via Codex's native plugin manager:
+
+```bash
+codex plugin marketplace add ckdals1108/skills
+codex plugin add ckdals1108-skills@ckdals1108
+```
+
+---
+
 ## Flagship Skill: `/teach-me`
 
 Decompose any topic, PR, or unfamiliar codebase into an executable prerequisite DAG. 
