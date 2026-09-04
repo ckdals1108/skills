@@ -1,0 +1,23 @@
+{
+  "name": "ckdals1108",
+  "owner": {
+    "name": "Changmin Woo",
+    "url": "https://github.com/ckdals1108"
+  },
+  "description": "Curated agent skills for software engineering and first-principles mastery.",
+  "plugins": [
+    {
+      "name": "ckdals1108-skills",
+      "source": "./",
+      "description": "Prerequisite DAG learning, architecture mastery, and principled agent engineering.",
+      "category": "productivity",
+      "keywords": [
+        "teach-me",
+        "engineering",
+        "skills",
+        "learning",
+        "dag"
+      ]
+    }
+  ]
+}

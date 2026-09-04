@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "kind": "headless-transcript",
+  "cases": [
+    {
+      "id": "first-frontier",
+      "purpose": "Show the big picture first, then halt at the first understanding node.",
+      "prompt": "Teach hash table collision resolution to a junior developer. Do not conduct external research; as this is the first learning round, output only the full DAG map, the first node explanation, and the single check question awaiting an answer.",
+      "assertions": [
+        "Presents a complete DAG or equivalent understanding map showing prerequisite relationships.",
+        "Starts first learning content with Understanding DAG.",
+        "Understanding map contains Slice, Question to Answer, Prerequisites, Priority, and Status.",
+        "Presents a Big Picture containing ultimate goal, overall flow, and why current Slice is needed first.",
+        "Explicitly names current Slice and the question it answers.",
+        "Outputs clean text flowchart instead of Mermaid since surface is unspecified.",
+        "Presents distinct sections for Learning Goal, Explanation, Related Questions, and Understanding Check.",
+        "Related Questions use Question 1 format, do not exceed three, and do not demand answers.",
+        "Explains why first node is needed, core mechanics, minimal example, and next node link.",
+        "Poses a single understanding check question and awaits the user's answer.",
+        "Does not explain downstream nodes or declare understanding verified."
+      ],
+      "risk": "outline-only-or-overrun"
+    },
+    {
+      "id": "desktop-map",
+      "purpose": "Use table and Mermaid flowchart together on Mermaid-rendering surfaces.",
+      "prompt": "On a ChatGPT Desktop surface, teach hash table collision resolution to a junior developer. Do not conduct external research; write only the first learning round.",
+      "assertions": [
+        "Presents a table containing Slice, Question to Answer, Prerequisites, Priority, and Status.",
+        "If more than one Slice, presents a flowchart within a mermaid code block showing identical prerequisite relationships.",
+        "Indicates current Slice is In Progress in both table and Mermaid diagram."
+      ],
+      "risk": "wrong-surface-adapter"
+    },
+    {
+      "id": "source-grounded-recovery",
+      "purpose": "Convert an incorrect answer into prerequisite recovery grounded in source facts.",
+      "prompt": "The only source is: 'HTTP cache reduces network requests by reusing previous responses. Cache-Control: max-age=N means the response is fresh for N seconds. A fresh response can usually be reused without origin revalidation.' The goal is determining if a fresh response requires a new request. The learner answered: 'If max-age=60, cache is unconditionally used for 60 minutes.' Output only the current status, DAG map, prerequisite recovery explanation, and next check question. Do not teach HTTP facts outside the source.",
+      "assertions": [
+        "Preserves the source fact that N is in seconds.",
+        "Corrects the misconceptions of '60 minutes' and 'unconditionally'.",
+        "Marks the corresponding premise node as Needs Review or equivalent status.",
+        "Does not introduce HTTP rules outside the provided source as facts.",
+        "Presents a follow-up check question after recovery."
+      ],
+      "risk": "ungrounded-correction"
+    },
+    {
+      "id": "source-conflict",
+      "purpose": "Retain conflicting sources as unverified blanks on the map rather than forcing a conclusion.",
+      "prompt": "Teach cache expiration policies using only two sources. Source A claims 'It always expires after 60 seconds'. Source B claims 'Expiration duration varies depending on conditions'. It is unknown which source is authoritative.",
+      "assertions": [
+        "Explicitly states the conflict between the two sources.",
+        "Does not teach a single conclusion regarding expiration duration.",
+        "Marks the conflict as On Hold or a blank to verify, presenting next actions to locate required authoritative sources."
+      ],
+      "risk": "false-certainty"
+    },
+    {
+      "id": "overview-is-not-mastery",
+      "purpose": "Distinguish between a time-bounded quick overview and verified understanding.",
+      "prompt": "Provide a quick overview of graph traversal in 3 minutes. The learner has not answered any check questions or completed application tasks.",
+      "assertions": [
+        "May provide full map and minimal explanations.",
+        "Marks the outcome as Quick Overview or equivalent unverified state.",
+        "Does not declare Understanding Verified without learner explanation of core connections."
+      ],
+      "risk": "premature-completion"
+    },
+    {
+      "id": "semantic-slicing-base-case",
+      "purpose": "Decompose a complex system into semantic Slices focused on single mechanisms starting from a Base Case.",
+      "prompt": "Teach the Two-Phase Commit (2PC) protocol in a distributed system to a junior backend developer. Do not conduct external research; write only the DAG map and the first Slice of the first learning round.",
+      "assertions": [
+        "Presents a minimal happy-path model (Base Case) as the first Slice or root node prior to failure recovery or exceptions.",
+        "Keeps each Slice's Question to Answer focused on a single runtime mechanism or decision criterion.",
+        "Poses exactly one check question prompting the learner to explain the core in their own words, awaiting their response."
+      ],
+      "risk": "monolithic-node-or-premature-complexity"
+    }
+  ]
+}

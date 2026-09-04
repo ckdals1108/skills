@@ -1,0 +1,11 @@
+{
+  "name": "ckdals1108-skills",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curated agent skills for software engineers — Claude Code, Codex CLI, Cursor, and Antigravity.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckdals1108/skills"
+  },
+  "license": "MIT"
+}
