@@ -155,25 +155,6 @@ I built these skills to eliminate the hidden failure modes of AI-assisted engine
 
 ---
 
-## Built-in Verification Suite
-
-Every skill in this repository includes a dedicated headless evaluation suite under `eval/`:
-
-```bash
-# Test against the 6 standard regression cases:
-codex -a never exec --ephemeral --skip-git-repo-check -s read-only -C /tmp \
-  'Use $teach-me to ...'
-```
-
-Verified assertions include:
-- Base Case root anchoring
-- Single-mechanism semantic slicing
-- Strictly bounded single check question
-- Source-grounded misconception recovery
-- Strict separation between `Quick Overview` and verified mastery
-
----
-
 ## License
 
 [MIT](LICENSE)
