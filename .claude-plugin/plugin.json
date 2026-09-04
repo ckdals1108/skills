@@ -2,10 +2,6 @@
   "name": "ckdals1108-skills",
   "version": "1.0.0",
   "description": "Curated agent skills for real engineering — prerequisite DAG learning, architecture mastery, and principled agent engineering.",
-  "author": {
-    "name": "Eden",
-    "url": "https://github.com/ckdals1108"
-  },
   "homepage": "https://github.com/ckdals1108/skills",
   "repository": "https://github.com/ckdals1108/skills",
   "license": "MIT",

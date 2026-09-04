@@ -153,4 +153,4 @@ Verified assertions include:
 
 ## License
 
-[MIT](LICENSE) © 2026 Eden (ckdals1108)
+[MIT](LICENSE)
