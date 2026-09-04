@@ -5,9 +5,22 @@
 
 > **Understand what you (or the AI) built from first principles — not vibe learning.**
 
+> *"If you can't explain it simply, you don't understand it well enough."*  
+> — Richard Feynman
+
 AI coding agents can generate entire microservices and complex distributed transactions in seconds. But shipping fast creates **understanding debt**: when production crashes at 2 AM or architecture reviews come up, can you actually explain why the system works in your own words?
 
-Summaries do not create understanding. Bullet points do not create mental models. 
+Summaries do not create understanding. Bullet points do not create mental models.
+
+### The Contrast
+
+| Dimension | Generic AI Explanations | `/teach-me` (Socratic DAG) |
+| :--- | :--- | :--- |
+| **Pacing** | Dumps 2,000 words of monolithic lecture | Slices into prerequisite DAG; 1 node at a time |
+| **Cognitive Mode** | Passive skimming (illusion of competence) | Active verbalization from first principles |
+| **Anchoring** | Starts with edge cases & full complexity | Anchors in minimal **Base Case** (happy path) |
+| **Verification** | Assumes you understand; moves on | Exactly **1 check question**; waits for your explanation |
+| **Outcome** | Vanishes in 30 minutes (**Understanding Debt**) | Permanent mental model (**True Mastery**) |
 
 These skills are designed to turn agents into rigorous Socratic mentors that decompose systems into **prerequisite DAGs**, anchor on **Base Cases**, and verify your understanding one slice at a time.
 
@@ -140,4 +153,4 @@ Verified assertions include:
 
 ## License
 
-[MIT](LICENSE) © 2026 Changmin Woo (ckdals1108)
+[MIT](LICENSE) © 2026 Eden (ckdals1108)
