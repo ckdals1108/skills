@@ -133,9 +133,6 @@ I built these skills to eliminate the hidden failure modes of AI-assisted engine
 
 ### #1: The Understanding Debt (Illusion of Competence)
 
-> *"If you can't explain it simply, you don't understand it well enough."*  
-> — Richard Feynman
-
 **The Problem**. AI coding agents write code faster than humans can internalize it. Shipping a distributed transaction in five minutes feels like a superpower until production crashes at 2 AM or an architecture review comes up. Skimming an AI-generated 2,000-word summary creates an illusion of understanding, but when asked why a lock or lease is held, you cannot explain it.
 
 **The Fix**. [`/teach-me`](./skills/teach-me/SKILL.md) forces Socratic active recall. It presents a single slice, asks **one** targeted understanding check question, and halts until you verbalize the mechanism in your own words.
@@ -144,9 +141,6 @@ I built these skills to eliminate the hidden failure modes of AI-assisted engine
 
 ### #2: Cognitive Overload (Monolithic Lectures)
 
-> *"Working memory capacity is strictly limited when dealing with novel information. Slicing element interactivity is the key to schema acquisition."*  
-> — John Sweller, *Cognitive Load Theory*
-
 **The Problem**. When asked to teach an architecture, generic LLMs dump monolithic lectures mixing the core happy path, error handling, network partitions, and edge cases in a single wall of text. The learner's working memory overflows, leading to shallow skimming and zero retention.
 
 **The Fix**. [`/teach-me`](./skills/teach-me/SKILL.md) constructs a **Prerequisite DAG** anchored in a minimal **Base Case** (happy-path model). It isolates novel mechanisms to one slice at a time, strictly deferring crash recovery and edge cases downstream until fundamentals are proven.
@@ -154,9 +148,6 @@ I built these skills to eliminate the hidden failure modes of AI-assisted engine
 ---
 
 ### #3: The Micro-Fragmentation Trap (Missing the Forest)
-
-> *"Separation of concerns is not about cutting things into arbitrary pieces, but about dividing them along natural boundaries so they can be recombined into a coherent whole."*  
-> — Edsger W. Dijkstra & David Parnas
 
 **The Problem**. Tutorials that cut concepts too thinly leave developers with isolated puzzle pieces, unable to see how runtime invariants interact across the wider system.
 
